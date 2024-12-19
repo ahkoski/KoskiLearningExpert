@@ -110,3 +110,76 @@ p {
     margin-top: 40px;
     color: #666;
 }
+
+/* Navigation styles */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item > a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.nav-item:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: #666;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+}
+
+.dropdown a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Adjust your hero section to account for fixed navbar */
+.hero {
+    margin-top: 4rem; /* Add this line */
+}
