@@ -6,11 +6,112 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.8;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Navigation styles - keeping your existing nav styles */
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0052a3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    margin-top: 40px;
+    color: #666;
+}
+
+/* Navigation styles */
 .navbar {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -20,141 +121,141 @@ body {
     z-index: 1000;
 }
 
-/* Your existing nav styles remain the same */
-/* ... */
-
-/* Updated Hero section */
-.hero {
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('images/hero_book\ 1900.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 4rem; /* Keep the navbar offset */
-}
-
-.hero-content {
-    max-width: 1000px;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.hero h2 {
-    font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Updated button styles */
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: all 0.3s;
-    font-weight: 500;
-    margin: 0 10px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-/* Updated About section */
-.about {
-    padding: 100px 0;
-    background: white;
-}
-
-.container {
+.nav-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
-}
-
-.about-content {
     display: flex;
-    align-items: flex-start;
-    gap: 60px;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-.about-text {
-    flex: 3;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #333;
+    text-decoration: none;
 }
 
-.about-text p {
-    font-size: 1.1rem;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item > a {
     color: #666;
-    margin-bottom: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
 }
 
-.about-image {
-    flex: 2;
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    min-width: 200px;
 }
 
-.profile-image {
-    width: 100%;
-    height: auto;
+.nav-item:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: #666;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+}
+
+.dropdown a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Adjust your hero section to account for fixed navbar */
+.hero {
+    margin-top: 4rem; 
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.link-card {
+    background: white;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.quote {
-    text-align: center;
-    font-style: italic;
-    margin-top: 3rem;
-    font-size: 1.2rem;
+.link-card:hover {
+    transform: translateY(-5px);
+}
+
+.link-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.link-card p {
     color: #666;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px;
 }
 
-/* Responsive design */
+.card-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #0056b3;
+}
+
+/* Update button styles */
+.button.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.button.tertiary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Responsive design updates */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .links-grid {
+        grid-template-columns: 1fr;
     }
-
-    .about-content {
-        flex-direction: column-reverse;
-    }
-
-    .about-image {
-        margin-bottom: 2rem;
-    }
-
-    .container {
-        padding: 0 20px;
+    
+    .nav-links {
+        display: none; /* Add mobile menu functionality later */
     }
 }
